@@ -1,0 +1,44 @@
+{% extends "dashboard.html" %}
+{% block content %}
+<h2>Your Files</h2>
+
+<div class="container">
+<table>
+    <thead>
+        <tr>
+            <th>Filename</th>
+            <th>File Type</th>
+            <th>File Size(MB)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for file in files %}
+        <tr>
+            <!-- Filename with Extension -->
+            <td class="filename">{{ file[1] }}</td>
+
+            <!-- File Type -->
+            <td class="filename">{{ file[2] }}</td>
+            <td class="filename">{{ file[3] }}</td>
+
+            <!-- Actions -->
+            <td class="actions">
+                <!-- Download Form -->
+                <form action="/download/{{ file[0] }}" method="POST" >
+                    <button type="submit" class="download-btn">Download</button> 
+                </form>
+
+                <!-- Delete Form -->
+                <form action="/delete/{{ file[0] }}" method="POST" >
+                    <button type="submit" class="delete-btn">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+{% endblock %}

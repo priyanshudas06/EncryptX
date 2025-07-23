@@ -1,0 +1,24 @@
+{% extends "dashboard.html" %}
+{% block content %}
+
+<h1>{{ session.username }}</h1>
+
+
+<div class="welcome-section">
+    <h1>Welcome to <span style="color: #499df1;">EncryptX</span>!</h1><br>
+    <p><strong>Your one-stop platform for secure and efficient multimedia content management.</strong></p><br>
+  
+    <h2>Features You'll Love:</h2>
+    <ul>
+      <li><strong>Upload Files with Ease:</strong> Easily upload images, videos, documents, and audio files. Supported formats include <em>MP3, MP4, PDF, JPG, PNG</em>, and more.</li>
+      <li><strong>Download Anytime, Anywhere:</strong> Access your files on the go by simply logging into your account.</li>
+      <li><strong>Secure File Encryption:</strong> We use advanced encryption technology to keep your files safe and accessible only to you.</li>
+      <li><strong>User-Friendly Interface:</strong> Designed for a seamless experience, perfect for first-time and experienced users alike.</li>
+    </ul>
+    <br>
+    <h2>Getting Started is Easy!</h2>
+    <p>1. <strong>Upload Files:</strong> Securely upload your multimedia files with just a few clicks.</p>
+    <p>2. <strong>Manage Your Files:</strong> Keep everything organized and accessible in one place.</p>
+    <p>3. <strong>Download and Share:</strong> Access and share your files whenever you need them.</p>
+  </div>
+{% endblock %}

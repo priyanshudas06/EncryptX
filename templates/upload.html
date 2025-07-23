@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/upload.css') }}">
+</head>
+<body>
+    <!-- Show message alredy exist if the file uploaded previosly -->
+    {% if x %}
+    <div class="message">
+        <p><strong>File already uploaded previosly!</strong></p>
+        <a href="{{ url_for('dashboard') }}">
+            <button>OK</button>
+        </a>
+    </div>
+
+    <!-- Show success message and encryption key after uploading -->
+    {% elif key %}
+        <div class="message">
+            <p><strong>File uploaded successfully!</strong></p>
+            <p><strong>The Encryption Key has been sent to your mail.</strong></p>
+            <p><strong>Encryption Key:</strong> {{ key }}</p>
+            <a href="{{ url_for('dashboard_home') }}">
+                <button>OK</button>
+            </a>
+        </div>
+    {% else %}
+        <h1>Upload a File</h1>
+        <!-- If no key, show the file upload form -->
+        <form method="POST" enctype="multipart/form-data">
+            <div class="input-container">
+                <input type="file" name="file" required>
+                <button type="submit">Upload</button>
+            </div>
+        </form>
+    {% endif %}
+
+</body>
+</html>

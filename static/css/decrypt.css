@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Styling */
+body {
+    font-family: "Bebas Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+    /* background-image: url('../images/back.avif'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    animation: gradientBG 8s ease infinite;
+    color: #333;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container Styling */
+.container {
+    position: relative; /* Required for absolute positioning of child elements */
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading */
+h1 {
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.input-container input {
+    margin-top: 20px;
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-container input:focus {
+    border-color: #6a1b9a;
+    box-shadow: 0 0 8px rgba(106, 27, 154, 0.5);
+}
+
+/* Button Styling */
+.input-container button {
+    
+    all: unset;
+    background-color: #6a1b9a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    height: 28px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(106, 27, 154, 0.3);
+    letter-spacing: 1.5px;
+    
+    
+}
+
+.input-container button:hover {
+    background-color: #8e24aa;
+    transform: translateY(-2px);
+}
+
+/* File Input */
+input[type="file"] {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+/* Home Button */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Positioned to the top left */
+}
+
+.home-button button {
+    all: unset;
+    background-color: #6a1b9a;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(106, 27, 154, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button button:hover {
+    background-color: #8e24aa;
+    transform: scale(1.1);
+}
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Positioned to the top left */
+}
+
+.logout-button button {
+    all: unset;
+    background-color: #6a1b9a;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(106, 27, 154, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button button:hover {
+    background-color: #8e24aa;
+    transform: scale(1.1);
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+    }
+}

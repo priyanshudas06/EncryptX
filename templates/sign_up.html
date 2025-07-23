@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{url_for('static',filename= 'css/sign_up.css') }}">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signupForm" method = "POST">
+                <!-- User Details -->
+                <div class="form-group">
+                    <label for="username"> <ion-icon name="person"></ion-icon> User Name</label>
+                    <input type="text" id="username" name="username" placeholder="Enter User name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><ion-icon name="mail"></ion-icon> Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><ion-icon name="lock-closed"></ion-icon> Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create Password" required>
+                </div>
+                <div class="form-group">
+                    <button type="button" id="sendOtpBtn">Send OTP</button>
+                </div>
+
+                <!-- OTP Verification -->
+                <div class="form-group otp-group" style="display: none;">
+                    <label for="otp">Enter OTP</label>
+                    <input type="text" id="otp" name="otp" placeholder="Enter the OTP" required>
+                    <small>Check your email for the OTP</small>
+                </div>
+                <div class="form-group otp-group" style="display: none;">
+                    <button type="button" id="verifyOtpBtn">Verify OTP</button>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-group">
+                    <button type="submit" id="signupBtn" disabled>Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

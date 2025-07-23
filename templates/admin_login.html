@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{{url_for('static',filename= 'css/login.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="signin-form">
+            <h2>Admin Sign In</h2>
+            <form id="signinForm" method="POST">
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class = "click" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class = "click" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-group">
+                    <button type="submit" class = "click">Sign In</button>
+                </div>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

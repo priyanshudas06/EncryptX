@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", serif;
+}
+body {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the screen without distortion */
+    z-index: -1; /* Places the video behind the content */
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    z-index: 99;
+    font-size: 2em;
+    color: white;
+    user-select: none;
+    margin-right: 40px;
+}
+
+
+.navbar a{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none ;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.navbar a:hover::after{
+    transform-origin: left;
+    transform:  scaleX(1);
+}
+
+.login-button{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+.login-button:hover {
+    background: white;
+    color: black;
+}
+
+.SignUp-button{
+    width: 130px;
+    height: 50px;
+    background: rgba(10, 186, 157, 0.751);
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #f9f5f5;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+.SignUp-button:hover {
+    background: rgb(72, 220, 203);
+    color: black;
+}
+h1 {
+    margin-top: 200px;
+    color: white;
+    font-size: 3em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+h1:hover span:nth-child(1){
+    margin-right: 10px;
+}
+h1:hover span:nth-child(1):after{
+    content:""
+}
+h1:hover span:nth-child(2){
+    margin-left: 40px;
+}
+
+h1:hover span{
+    color: #e4efed;
+    text-shadow: 0 0 10px #f9faf9,
+                 0 0 20px #fff,
+                 0 0 40px #fff,
+                 0 0 80px #fff,
+                 0 0 120px #fff,
+                 0 0 160px #fff;
+}
+h4{  
+    font-size: 1.8em;
+    color: white;
+    padding-top: 300px;
+    text-align: center;
+}
+p{  
+    font-size: 1.25em;
+    color: white;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}

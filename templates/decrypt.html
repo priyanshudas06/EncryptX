@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/decrypt.css') }}">
+
+    <script>
+        // Automatically refresh the page after form submission
+        function refreshPageAfterDownload() {
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000); // Delay refresh to ensure the file is downloaded
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <a href="{{ url_for('dashboard_home') }}" class="home-button">
+            <button><ion-icon name="home-outline"></ion-icon></button>
+        </a>
+        <a href="{{ url_for('logout') }}" class="logout-button">
+            <button><ion-icon name="log-out-outline"></ion-icon></button>
+        </a>
+        <h1>Decrypt a File</h1>
+        <!-- If no key, show the file upload form -->
+        <form method="POST" enctype="multipart/form-data" onsubmit="refreshPageAfterDownload()">
+            <div class="input-container">
+                <input type="file" name="file" required>
+                <input type="text" name = "key" placeholder="Enter encryption key" required>
+                <button  id = "Bt" type="submit">Decrypt</button>
+            </div>
+        </form>
+    </div>
+       
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

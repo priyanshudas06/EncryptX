@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dash.css') }}">
+    {% if css_file %}
+    <link rel="stylesheet" href="{{ url_for('static', filename=css_file) }}">
+    {% endif %}
+   
+</head>
+<body>
+    <div class="sidebar">
+        <div>
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="/dashboard_home"><ion-icon name="home-outline"></ion-icon> Home </a> </li>
+                <li><a href="/profile"><ion-icon name="person-circle-outline"></ion-icon> Profile </a></li>
+                <li><a href="/upload"><ion-icon name="add-circle-outline"></ion-icon> New </a></li>
+                <li><a href="/decrypt"><ion-icon name="lock-open-outline"></ion-icon> Decrypt </a> </li>
+                <li><a href="/files"><ion-icon name="folder-outline"></ion-icon> Files </a></li>
+                
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="/logout"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="main-content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

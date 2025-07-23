@@ -1,0 +1,49 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.profile-card {
+    background: #6ff2cb;
+    width: 400px;
+    height: 440px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #499df1;
+    margin-bottom: 15px;
+}
+.profile-card h2 {
+    margin: 15px 0 5px;
+    font-size: 1.8rem;
+    color: #da9c9c;
+}
+.profile-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.5rem;
+    color: #e9b26f;
+}
+.profile-card p {
+    font-size: 1rem;
+    color: #5327f1;
+    margin: 5px 0 20px;
+    line-height: 1.6;
+}
